@@ -1,9 +1,10 @@
 import React from 'react';
-
 import './App.css';
 
+import profile from './assets/gabriel.jpg';
+
 function App() {
-  return <h1>Teste aplicação</h1>
+  return <img width="200" src={profile}/>
 }
 
 export default App;
