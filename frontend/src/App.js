@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 
-import profile from './assets/gabriel.jpg';
+import Header from './components/Header';
 
 function App() {
-  return <img width="200" src={profile}/>
+  return <Header />
 }
 
 export default App;

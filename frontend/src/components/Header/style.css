@@ -1,0 +1,50 @@
+.container {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #dddddd;
+  opacity: 1;
+  padding: 0 30px;
+}
+
+.content {
+  height: 64px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.open {
+  display: flex;
+  flex-direction: row;
+}
+
+.open input {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;  
+}
+
+nav select {
+  background: none;
+  border:none;
+  -webkit-appearance: none;
+}
+
+.selects i {
+  margin-left: 10px;
+}
+
+.selects {
+  border-bottom: 1px solid #555;
+  margin-left: 20px;
+}
+
+ 
+
+
+
+  
