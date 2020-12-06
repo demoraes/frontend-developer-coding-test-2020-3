@@ -20,7 +20,7 @@
 
 .open input {
   margin-right: 5px;
-  margin-left: 5px;
+  margin-left: 15px;
 }
 
 nav {
@@ -39,7 +39,7 @@ nav select {
 }
 
 .selects {
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid #dddddd;
   margin-left: 20px;
 }
 
