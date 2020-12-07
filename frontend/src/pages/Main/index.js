@@ -27,9 +27,216 @@ export default function Main() {
 
   return (
     <main>
-      <div className="ContainerListRest">
+      <section className="ContainerListRest">
         <h2>All Restaurants</h2>
-        <ul className="ListRestaurants">
+        <ul>
+          <li>
+            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+            <h1 className="titleRestaurant">
+              Gordon Rmsay Hell's Kitchen
+            </h1>
+            <ReactStars
+              color1="#000"
+              color2="#002b56e0"
+              edit={false}
+              half
+            />
+            <div className="status">
+              <span className="statusText">
+                AMERICAN (NEW) - $$$
+              </span>
+              <span className="statusNow">
+                open º
+              </span>
+            </div>
+
+            <button>Learn More</button>
+          </li>
+
+          <li>
+            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+            <h1 className="titleRestaurant">
+              Gordon Rmsay Hell's Kitchen
+            </h1>
+            <ReactStars
+              color1="#000"
+              color2="#002b56e0"
+              edit={false}
+              half
+            />
+            <div className="status">
+              <span className="statusText">
+                AMERICAN (NEW) - $$$
+              </span>
+              <span className="statusNow">
+                open º
+              </span>
+            </div>
+
+            <button>Learn More</button>
+          </li>
+
+          <li>
+            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+            <h1 className="titleRestaurant">
+              Gordon Rmsay Hell's Kitchen
+            </h1>
+            <ReactStars
+              color1="#000"
+              color2="#002b56e0"
+              edit={false}
+              half
+            />
+            <div className="status">
+              <span className="statusText">
+                AMERICAN (NEW) - $$$
+              </span>
+              <span className="statusNow">
+                open º
+              </span>
+            </div>
+
+            <button>Learn More</button>
+          </li>
+
+          <li>
+            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+            <h1 className="titleRestaurant">
+              Gordon Rmsay Hell's Kitchen
+            </h1>
+            <ReactStars
+              color1="#000"
+              color2="#002b56e0"
+              edit={false}
+              half
+            />
+            <div className="status">
+              <span className="statusText">
+                AMERICAN (NEW) - $$$
+              </span>
+              <span className="statusNow">
+                open º
+              </span>
+            </div>
+
+            <button>Learn More</button>
+          </li>
+
+          <li>
+            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+            <h1 className="titleRestaurant">
+              Gordon Rmsay Hell's Kitchen
+            </h1>
+            <ReactStars
+              color1="#000"
+              color2="#002b56e0"
+              edit={false}
+              half
+            />
+            <div className="status">
+              <span className="statusText">
+                AMERICAN (NEW) - $$$
+              </span>
+              <span className="statusNow">
+                open º
+              </span>
+            </div>
+
+            <button>Learn More</button>
+          </li>
+
+          <li>
+            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+            <h1 className="titleRestaurant">
+              Gordon Rmsay Hell's Kitchen
+            </h1>
+            <ReactStars
+              color1="#000"
+              color2="#002b56e0"
+              edit={false}
+              half
+            />
+            <div className="status">
+              <span className="statusText">
+                AMERICAN (NEW) - $$$
+              </span>
+              <span className="statusNow">
+                open º
+              </span>
+            </div>
+
+            <button>Learn More</button>
+          </li>
+
+          <li>
+            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+            <h1 className="titleRestaurant">
+              Gordon Rmsay Hell's Kitchen
+            </h1>
+            <ReactStars
+              color1="#000"
+              color2="#002b56e0"
+              edit={false}
+              half
+            />
+            <div className="status">
+              <span className="statusText">
+                AMERICAN (NEW) - $$$
+              </span>
+              <span className="statusNow">
+                open º
+              </span>
+            </div>
+
+            <button>Learn More</button>
+          </li>
+
+          <li>
+            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+            <h1 className="titleRestaurant">
+              Gordon Rmsay Hell's Kitchen
+            </h1>
+            <ReactStars
+              color1="#000"
+              color2="#002b56e0"
+              edit={false}
+              half
+            />
+            <div className="status">
+              <span className="statusText">
+                AMERICAN (NEW) - $$$
+              </span>
+              <span className="statusNow">
+                open º
+              </span>
+            </div>
+
+            <button>Learn More</button>
+          </li>
+
+          <li>
+            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+            <h1 className="titleRestaurant">
+              Gordon Rmsay Hell's Kitchen
+            </h1>
+            <ReactStars
+              color1="#000"
+              color2="#002b56e0"
+              edit={false}
+              half
+            />
+            <div className="status">
+              <span className="statusText">
+                AMERICAN (NEW) - $$$
+              </span>
+              <span className="statusNow">
+                open º
+              </span>
+            </div>
+
+            <button>Learn More</button>
+          </li>
+
           <li>
             <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
             <h1 className="titleRestaurant">
@@ -53,7 +260,7 @@ export default function Main() {
             <button>Learn More</button>
           </li>
         </ul>
-      </div>
+      </section>
     </main >
   );
 
