@@ -1,4 +1,8 @@
 import React, { useEffect } from 'react';
+import ReactStars from 'react-stars';
+// import ReactLoading from 'react-loading';
+// import { FiXCircle } from 'react-icons/fi';
+// import Modal from 'react-modal';
 
 import api from '../../services/api';
 
@@ -22,17 +26,35 @@ export default function Main() {
   }, []);
 
   return (
-    <div className="main">
-      <div className="item">
-        <img
-          src="https://blog.novasafra.com.br/wp-content/uploads/2018/03/comida-arabe-780x450.jpg"
-          alt="comida"
-        />
-        <p>Very Long Name Restaurants Number 1 in listaaaaaaaaaaaaaaaaa</p>
+    <main>
+      <div className="ContainerListRest">
+        <h2>All Restaurants</h2>
+        <ul className="ListRestaurants">
+          <li>
+            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
+            <h1 className="titleRestaurant">
+              Gordon Rmsay Hell's Kitchen
+            </h1>
+            <ReactStars
+              color1="#000"
+              color2="#002b56e0"
+              edit={false}
+              half
+            />
+            <div className="status">
+              <span className="statusText">
+                AMERICAN (NEW) - $$$
+              </span>
+              <span className="statusNow">
+                open º
+              </span>
+            </div>
 
-        <button>LEARN MORE</button>
+            <button>Learn More</button>
+          </li>
+        </ul>
       </div>
-
-    </div>
+    </main >
   );
+
 }

@@ -8,11 +8,6 @@ module.exports = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
-    host: '0.0.0.0',
-    historyApiFallback: true,
-    hot: true,
-    open: true,
-    openPage: 'http://localhost:8080',
   },
   module: {
     rules: [
