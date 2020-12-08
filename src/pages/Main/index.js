@@ -15,12 +15,16 @@ export default function Main() {
   const [restaurants, setRestaurants] = useState([]);
   const [price, setPrice] = useState('All');
   const [filterCategory, setFilterCategory] = useState('');
+  const [filterOpenNow, setFilterOpenNow] = useState(false);
   const [isLaoading, setIsLaoading] = useState(false);
   const [filterPrice, setFilterPrice] = useState('');
 
+  const wd = window.innerWidth;
+
+
   useEffect(() => {
     loadRestaurant();
-  }, [filterPrice, filterCategory]);
+  }, [filterPrice, filterCategory, filterOpenNow]);
 
   async function loadRestaurant() {
     setIsLaoading(true);
@@ -28,7 +32,7 @@ export default function Main() {
     const response = await api.get("businesses", {
       params: {
         price,
-        categories: filterCategory
+        open_now: filterOpenNow,
       },
     });
 
@@ -68,6 +72,7 @@ export default function Main() {
 
   function handleCategoryFilter(category) {
     setFilterCategory(category);
+
     //setFilerClean(true);
   }
 
@@ -78,17 +83,27 @@ export default function Main() {
         price={price}
         filterCategory={filterCategory}
         handleCategoryFilter={handleCategoryFilter}
+        filterOpenNow={filterOpenNow}
+        setFilterOpenNow={setFilterOpenNow}
       />
       <main>
         <section className="ContainerListRest">
           <h2>All Restaurants</h2>
           <ul>
             {restaurants.map(restaurant => (
-              <li key={restaurant.id}>
+              <li
+                key={restaurant.id}
+                open={
+                  restaurant.hours[0]
+                    ? restaurant.hours[0].is_open_now
+                    : false
+                }
+              >
                 <img src={restaurant.image_url} alt="imagem" />
                 <h1 className="titleRestaurant">{restaurant.name}</h1>
                 <ReactStars
-                  color1="#000"
+                  value={restaurant.rating}
+                  color1="#fff"
                   color2="#002b56e0"
                   edit={false}
                   half
@@ -98,7 +113,21 @@ export default function Main() {
                     {`${restaurant.categories[0].title} - ${restaurant.price}`}
                   </span>
                   <span className="statusNow">
-                    open º
+                    {wd <= 425 ? (
+                      <span className="status">
+                        {restaurant.hours[0] &&
+                          restaurant.hours[0].is_open_now
+                          ? 'open'
+                          : 'closed'}
+                      </span>
+                    ) : (
+                        <span className="status">
+                          {restaurant.hours[0] &&
+                            restaurant.hours[0].is_open_now
+                            ? 'open now'
+                            : 'closed'}
+                        </span>
+                      )}
                   </span>
                 </div>
 
