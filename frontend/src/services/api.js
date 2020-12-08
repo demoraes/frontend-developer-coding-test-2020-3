@@ -1,19 +1,19 @@
 import axios from 'axios';
 
-const API_KEY = "ntzIk5iasX7PLW5ybOi-2aaWyRTA6PTwWi4Da9VWUJ-3CL9w8r5aV1hdg94JGxd7OjuckoCLKtUyzuotRbAMnJDptMqCQMq_LxFRLa1bCQMq_LxFRLa1nCM38FUP2-f9PKE2";
+// const API_KEY = "ntzIk5iasX7PLW5ybOi-2aaWyRTA6PTwWi4Da9VWUJ-3CL9w8r5aV1hdg94JGxd7OjuckoCLKtUyzuotRbAMnJDptMqCQMq_xqFRLa1nM38FUP-fLNKEO2bC9OPLX3Yx";
 
-const URL = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/';
+
+// // REST
+// let api = axios.create({
+//   baseURL: 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/',
+//   headers: {
+//     Authorization: `Bearer ${API_KEY}`,
+//     "Content-type": "application/json",
+//   },
+// })
 
 const api = axios.create({
-  baseURL: URL,
-  timeout: 30000,
-  headers: {
-    Authorization: `Bearer ${API_KEY}`,
-    'Content-Type': 'application/json',
-    Accept: 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'x-requested-with': 'xmlhttprequest',
-  },
+  baseURL: 'http://localhost:3333/',
 });
 
 export default api;

@@ -21,10 +21,13 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.12.1",
     "axios": "^0.21.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-stars": "^2.2.5"
+    "react-loading": "^2.0.3",
+    "react-stars": "^2.2.5",
+    "react-toastify": "^6.1.0"
   }
 }

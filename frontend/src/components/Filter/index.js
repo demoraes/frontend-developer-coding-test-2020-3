@@ -4,7 +4,7 @@ import style from './style.css';
 
 import Header from '../Header';
 
-export default function Filter() {
+export default function Filter({ handlePriceFilter, priceSelect }) {
   return (
     <div className="container">
       <Header />
@@ -25,21 +25,21 @@ export default function Filter() {
             </div>
 
             <div className="dropdownPrice">
-              <span>Pricecurrent</span>
+              <span>{priceSelect}</span>
               <div className="dropdown-contentPrice">
-                <button type="button" >
+                <button type="button" onClick={() => handlePriceFilter('')}>
                   All
               </button>
-                <button type="button">
+                <button type="button" onClick={() => handlePriceFilter('1')}>
                   $
               </button>
-                <button type="button">
+                <button type="button" onClick={() => handlePriceFilter('2')}>
                   $$
               </button>
-                <button type="button">
+                <button type="button" onClick={() => handlePriceFilter('3')}>
                   $$$
               </button>
-                <button type="button">
+                <button type="button" onClick={() => handlePriceFilter('4')}>
                   $$$$
               </button>
               </div>
