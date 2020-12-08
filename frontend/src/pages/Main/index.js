@@ -14,30 +14,31 @@ import style from './style.css';
 export default function Main() {
   const [restaurants, setRestaurants] = useState([]);
   const [price, setPrice] = useState('All');
+  const [filterCategory, setFilterCategory] = useState('');
   const [isLaoading, setIsLaoading] = useState(false);
   const [filterPrice, setFilterPrice] = useState('');
 
   useEffect(() => {
-  
-    async function loadRestaurant() {
-      setIsLaoading(true);
-     
-      const response = await api.get("businesses", {
-        params: {
-          price,
-        },
-      });
-
-      setRestaurants(response.data);
-      setIsLaoading(false);
-    }
-    
     loadRestaurant();
-    setPriceSelect();
-  }, [filterPrice]);
+  }, [filterPrice, filterCategory]);
 
-  function setPriceSelect() {
-    switch (filterPrice) {
+  async function loadRestaurant() {
+    setIsLaoading(true);
+
+    const response = await api.get("businesses", {
+      params: {
+        price,
+        categories: filterCategory
+      },
+    });
+
+    setRestaurants(response.data);
+    setIsLaoading(false);
+  }
+
+
+  function priceSelect(valor) {
+    switch (valor) {
       case '':
         setPrice('All');
         break;
@@ -60,7 +61,13 @@ export default function Main() {
 
   function handlePriceFilter(valor) {
     setFilterPrice(valor);
-     
+    priceSelect(valor);
+    //setFilerClean(true);
+  }
+
+
+  function handleCategoryFilter(category) {
+    setFilterCategory(category);
     //setFilerClean(true);
   }
 
@@ -69,6 +76,8 @@ export default function Main() {
       <Filter
         handlePriceFilter={handlePriceFilter}
         price={price}
+        filterCategory={filterCategory}
+        handleCategoryFilter={handleCategoryFilter}
       />
       <main>
         <section className="ContainerListRest">

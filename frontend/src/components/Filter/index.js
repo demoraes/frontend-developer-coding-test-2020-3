@@ -4,7 +4,7 @@ import style from './style.css';
 
 import Header from '../Header';
 
-export default function Filter({ handlePriceFilter, price }) {
+export default function Filter({ handlePriceFilter, price, filterCategory, handleCategoryFilter }) {
   return (
     <div className="container">
       <Header />
@@ -29,60 +29,67 @@ export default function Filter({ handlePriceFilter, price }) {
               <div className="dropdown-contentPrice">
                 <button type="button" onClick={() => handlePriceFilter('')}>
                   All
-              </button>
+                </button>
                 <button type="button" onClick={() => handlePriceFilter('1')}>
                   $
-              </button>
+                </button>
                 <button type="button" onClick={() => handlePriceFilter('2')}>
                   $$
-              </button>
+                </button>
                 <button type="button" onClick={() => handlePriceFilter('3')}>
                   $$$
-              </button>
+                </button>
                 <button type="button" onClick={() => handlePriceFilter('4')}>
                   $$$$
-              </button>
+               </button>
               </div>
             </div>
 
             <div className="dropdown">
-              <span>FilterCategory</span>
+              <span>{filterCategory === '' ? 'All' : filterCategory}</span>
               <div className="dropdown-content">
-                <button type="button">
+                <button type="button" onClick={() => handleCategoryFilter('')}>
                   All
               </button>
                 <button
                   type="button"
+                  onClick={() => handleCategoryFilter('italian')}
                 >
                   Italian
               </button>
                 <button
                   type="button"
+                  onClick={() => handleCategoryFilter('seafood')}
                 >
                   Seafood
               </button>
                 <button
                   type="button"
+                  onClick={() => handleCategoryFilter('steakhouses')}
                 >
                   Steakhouses
               </button>
                 <button
                   type="button"
+                  onClick={() => handleCategoryFilter('jpanese')}
                 >
                   Japanese
               </button>
                 <button
                   type="button"
+                  onClick={() => handleCategoryFilter('american')}
                 >
                   American
               </button>
                 <button
                   type="button"
+                  onClick={() => handleCategoryFilter('mexican')}
                 >
                   Mexican
               </button>
                 <button
                   type="button"
+                  onClick={() => handleCategoryFilter('thai')}
                 >
                   Thai
               </button>
