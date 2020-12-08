@@ -18,8 +18,6 @@ export default function Main() {
   const [isLaoading, setIsLaoading] = useState(false);
   const [filterPrice, setFilterPrice] = useState('');
 
-  //const wd = window.innerWidth;
-
 
   useEffect(() => {
     loadRestaurant();
@@ -35,7 +33,7 @@ export default function Main() {
       },
     });
 
-    setRestaurants(response);
+    setRestaurants(response.data.search.business);
     setIsLaoading(false);
   }
 
