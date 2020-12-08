@@ -29,7 +29,7 @@ export default function Main() {
   async function loadRestaurant() {
     setIsLaoading(true);
 
-    const response = await api.get("businesses", {
+    const response = await api.get("businesses/search", {
       params: {
         price,
         open_now: filterOpenNow,
