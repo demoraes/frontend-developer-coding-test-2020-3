@@ -32,7 +32,7 @@ export default function Main() {
     const response = await api.get("businesses/search", {
       params: {
         location: 'Las Vegas',
-        price,
+        price: filterPrice,
         open_now: filterOpenNow,
       },
     });
