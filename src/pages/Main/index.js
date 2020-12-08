@@ -32,11 +32,10 @@ export default function Main() {
       params: {
         location: 'Las Vegas',
         price: filterPrice,
-      
       },
     });
 
-    setRestaurants(response.data);
+    setRestaurants(response);
     setIsLaoading(false);
   }
 
