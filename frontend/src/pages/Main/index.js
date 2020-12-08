@@ -15,23 +15,26 @@ export default function Main() {
   const [restaurants, setRestaurants] = useState([]);
   const [price, setPrice] = useState('All');
   const [isLaoading, setIsLaoading] = useState(false);
-  const [filterPrice, setFilterPrice] = useState(false);
+  const [filterPrice, setFilterPrice] = useState('');
 
   useEffect(() => {
-
+  
     async function loadRestaurant() {
       setIsLaoading(true);
-      const response = await api.get("businesses");
+     
+      const response = await api.get("businesses", {
+        params: {
+          price,
+        },
+      });
 
-      setPriceSelect();
       setRestaurants(response.data);
       setIsLaoading(false);
     }
-
     
     loadRestaurant();
+    setPriceSelect();
   }, [filterPrice]);
-
 
   function setPriceSelect() {
     switch (filterPrice) {
@@ -57,6 +60,7 @@ export default function Main() {
 
   function handlePriceFilter(valor) {
     setFilterPrice(valor);
+     
     //setFilerClean(true);
   }
 
@@ -64,7 +68,7 @@ export default function Main() {
     <>
       <Filter
         handlePriceFilter={handlePriceFilter}
-        priceSelect={priceSelect}
+        price={price}
       />
       <main>
         <section className="ContainerListRest">
