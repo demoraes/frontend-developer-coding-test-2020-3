@@ -4,7 +4,7 @@ import style from './style.css';
 
 import Header from '../Header';
 
-export default function Filter({ handlePriceFilter, price, filterCategory, handleCategoryFilter, filterOpenNow, setFilterOpenNow }) {
+export default function Filter({ handlePriceFilter, price, filterCategory }) {
   return (
     <div className="container">
       <Header />
@@ -19,10 +19,6 @@ export default function Filter({ handlePriceFilter, price, filterCategory, handl
                   type="radio"
                   name="open"
                   id="open"
-                  checked={filterOpenNow}
-                  onChange={() => {
-                    setFilterOpenNow(true);
-                  }}
                 />
               Open Now
             </label>

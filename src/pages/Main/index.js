@@ -15,16 +15,15 @@ export default function Main() {
   const [restaurants, setRestaurants] = useState([]);
   const [price, setPrice] = useState('All');
   const [filterCategory, setFilterCategory] = useState('');
-  const [filterOpenNow, setFilterOpenNow] = useState(false);
   const [isLaoading, setIsLaoading] = useState(false);
   const [filterPrice, setFilterPrice] = useState('');
 
-  const wd = window.innerWidth;
+  //const wd = window.innerWidth;
 
 
   useEffect(() => {
     loadRestaurant();
-  }, [filterPrice, filterCategory, filterOpenNow]);
+  }, [filterPrice, filterCategory]);
 
   async function loadRestaurant() {
     setIsLaoading(true);
@@ -33,7 +32,7 @@ export default function Main() {
       params: {
         location: 'Las Vegas',
         price: filterPrice,
-        open_now: filterOpenNow,
+      
       },
     });
 
@@ -67,14 +66,11 @@ export default function Main() {
   function handlePriceFilter(valor) {
     setFilterPrice(valor);
     priceSelect(valor);
-    //setFilerClean(true);
   }
 
 
   function handleCategoryFilter(category) {
     setFilterCategory(category);
-
-    //setFilerClean(true);
   }
 
   return (
@@ -84,8 +80,6 @@ export default function Main() {
         price={price}
         filterCategory={filterCategory}
         handleCategoryFilter={handleCategoryFilter}
-        filterOpenNow={filterOpenNow}
-        setFilterOpenNow={setFilterOpenNow}
       />
       <main>
         <section className="ContainerListRest">
@@ -94,11 +88,6 @@ export default function Main() {
             {restaurants.map(restaurant => (
               <li
                 key={restaurant.id}
-                open={
-                  restaurant.hours[0]
-                    ? restaurant.hours[0].is_open_now
-                    : false
-                }
               >
                 <img src={restaurant.image_url} alt="imagem" />
                 <h1 className="titleRestaurant">{restaurant.name}</h1>
@@ -114,21 +103,9 @@ export default function Main() {
                     {`${restaurant.categories[0].title} - ${restaurant.price}`}
                   </span>
                   <span className="statusNow">
-                    {wd <= 425 ? (
-                      <span className="status">
-                        {restaurant.hours[0] &&
-                          restaurant.hours[0].is_open_now
-                          ? 'open'
-                          : 'closed'}
-                      </span>
-                    ) : (
-                        <span className="status">
-                          {restaurant.hours[0] &&
-                            restaurant.hours[0].is_open_now
-                            ? 'open now'
-                            : 'closed'}
-                        </span>
-                      )}
+                    <span className="status">
+                      open
+                    </span>
                   </span>
                 </div>
 
