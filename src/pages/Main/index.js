@@ -20,10 +20,7 @@ export default function Main() {
 
 
   useEffect(() => {
-    loadRestaurant();
-  }, [filterPrice, filterCategory]);
-
-  async function loadRestaurant() {
+    async function loadRestaurant() {
     setIsLaoading(true);
 
     const response = await api.get("businesses/search", {
@@ -36,6 +33,11 @@ export default function Main() {
     setRestaurants(response.data.business);
     setIsLaoading(false);
   }
+    
+    loadRestaurant();
+  }, [filterPrice, filterCategory]);
+
+  
 
 
   function priceSelect(valor) {
