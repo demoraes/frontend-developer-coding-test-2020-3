@@ -30,7 +30,7 @@ export default function Main() {
       },
     });
     
-    setRestaurants(response.data.search.businesses);
+    setRestaurants(response.data.businesses);
     setIsLaoading(false);
   }
     
