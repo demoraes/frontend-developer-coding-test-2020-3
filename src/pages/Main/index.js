@@ -27,6 +27,7 @@ export default function Main() {
       params: {
         location: 'Las Vegas',
         price: filterPrice,
+        categories: filterCategory,
       },
     });
     
