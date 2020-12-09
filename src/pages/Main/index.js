@@ -32,8 +32,8 @@ export default function Main() {
         price: filterPrice,
       },
     });
-    console.log(response.data.search.business);
-    setRestaurants(response.data.search.business);
+    
+    setRestaurants(response.data.search);
     setIsLaoading(false);
   }
 
