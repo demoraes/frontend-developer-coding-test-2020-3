@@ -33,7 +33,7 @@ export default function Main() {
       },
     });
     
-    setRestaurants(response.data.search);
+    setRestaurants(response);
     setIsLaoading(false);
   }
 
