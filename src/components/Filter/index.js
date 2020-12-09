@@ -4,7 +4,7 @@ import style from './style.css';
 
 import Header from '../Header';
 
-export default function Filter({ handlePriceFilter, price, filterCategory }) {
+export default function Filter({ handlePriceFilter, price, filterCategory, handleCategoryFilter }) {
   return (
     <div className="container">
       <Header />
