@@ -12,7 +12,7 @@ import api from '../../services/api';
 import style from './style.css';
 
 export default function Main() {
-  const [restaurants, setRestaurants] = useState({});
+  const [restaurants, setRestaurants] = useState();
   const [price, setPrice] = useState('All');
   const [filterCategory, setFilterCategory] = useState('');
   const [isLaoading, setIsLaoading] = useState(false);
