@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = "ntzIk5iasX7PLW5ybOi-2aaWyRTA6PTwWi4Da9VWUJ-3CL9w8r5aV1hdg94JGxd7OjuckoCLKtUyzuotRbAMnJDptMqCQMq_xqFRLa1nM38FUP-fLNKEO2bC9OPLX3Yx";
+const API_KEY = "wJXxFFxcnVARFmM3IYYCtIhEVQxM2q_1sFXOoGmonQSs_855_k1K6ZFsf-SUZhZIiFrZoXLL_OLwyYE4Rl0ap6Ugoy1ENgOwlD0MBvYdVZIixS-AdookQerZiVxPYHYx";
 
 // REST
 const api = axios.create({
